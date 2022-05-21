@@ -104,9 +104,7 @@ class _BluetoothPageState extends State<BluetoothPage> {
                 children: [
                   TextButton(
                     onPressed: () {
-                      setState(() {
-                        bluetoothModule.scan();
-                      });
+                      setState(bluetoothModule.scan);
                     },
                     child: const Text('Start Scan'),
                   ),

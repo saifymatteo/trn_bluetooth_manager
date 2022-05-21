@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:trn_bluetooth_manager/app/view/bluetooth_page.dart';
+// import 'package:trn_bluetooth_manager/app/view/bluetooth_page.dart';
 // import 'package:trn_bluetooth_manager/counter/counter.dart';
 import 'package:trn_bluetooth_manager/app/view/bluetooth_test_page.dart';
 import 'package:trn_bluetooth_manager/l10n/l10n.dart';
