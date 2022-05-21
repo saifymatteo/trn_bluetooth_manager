@@ -11,7 +11,7 @@ import 'package:trn_bluetooth_manager/counter/counter.dart';
 import 'package:trn_bluetooth_manager/l10n/l10n.dart';
 
 class CounterPage extends StatelessWidget {
-  const CounterPage();
+  const CounterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class CounterPage extends StatelessWidget {
 }
 
 class CounterView extends StatelessWidget {
-  const CounterView();
+  const CounterView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,7 @@ class CounterView extends StatelessWidget {
 }
 
 class CounterText extends StatelessWidget {
-  const CounterText();
+  const CounterText({super.key});
 
   @override
   Widget build(BuildContext context) {
