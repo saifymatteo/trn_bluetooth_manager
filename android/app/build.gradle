@@ -32,7 +32,8 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion flutter.compileSdkVersion
+    // compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 31
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -49,8 +50,8 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.verygoodcore.trn_bluetooth_manager"
-        minSdkVersion flutter.minSdkVersion
+        applicationId "com.saifymatteo.trn_bluetooth_manager"
+        minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -85,17 +86,17 @@ android {
         production {
             dimension "default"
             applicationIdSuffix ""
-            manifestPlaceholders = [appName: "Trn Bluetooth Manager"]
+            manifestPlaceholders = [appName: "TRN Bluetooth Manager"]
         }
         staging {
             dimension "default"
             applicationIdSuffix ".stg"
-            manifestPlaceholders = [appName: "[STG] Trn Bluetooth Manager"]
+            manifestPlaceholders = [appName: "[STG] TRN Bluetooth Manager"]
         }
         development {
             dimension "default"
             applicationIdSuffix ".dev"
-            manifestPlaceholders = [appName: "[DEV] Trn Bluetooth Manager"]
+            manifestPlaceholders = [appName: "[DEV] TRN Bluetooth Manager"]
         }
     }
 
