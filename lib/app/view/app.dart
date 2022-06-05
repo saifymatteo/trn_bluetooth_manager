@@ -7,11 +7,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-// import 'package:trn_bluetooth_manager/app/view/bluetooth_page.dart';
-// import 'package:trn_bluetooth_manager/counter/counter.dart';
-import 'package:trn_bluetooth_manager/app/view/bluetooth_test_page.dart';
+import 'package:trn_bluetooth_manager/app/view/bluetooth_ble_page.dart';
+import 'package:trn_bluetooth_manager/app/view/bluetooth_page.dart';
+import 'package:trn_bluetooth_manager/app/view/bluetooth_serial_page.dart';
 import 'package:trn_bluetooth_manager/l10n/l10n.dart';
-
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -30,7 +29,59 @@ class App extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const BluetoothTestPage(),
+      home: const ChooseApp(),
+    );
+  }
+}
+
+class ChooseApp extends StatelessWidget {
+  const ChooseApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.amber),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute<Widget>(
+                      builder: (_) => const FlutterBlueApp(),
+                    ),
+                  );
+                },
+                child: const Text('Low Energy'),
+              ),
+              TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.amber),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute<Widget>(
+                      builder: (_) => const BluetoothApp(),
+                    ),
+                  );
+                },
+                child: const Text('Serial'),
+              ),
+              TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.amber),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute<Widget>(
+                      builder: (_) => const BluetoothPage(),
+                    ),
+                  );
+                },
+                child: const Text('Custom'),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
